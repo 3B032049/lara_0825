@@ -16,19 +16,19 @@ use App\Models\Post;
 */
 Route::get('/', function () {
     //return redirect(route('posts.index'));
-
+/*
     $post = new Post();
     $post->title="test_title";
     $post->content="test_content";
     $post->save();
     return 'Saved, OK!';
+*/
 
-    /*
     Post::create([
         'title'=>'created title',
         'content'=>'created content',
     ]);
-    */
+    
     /*
     $post = Post::find(1);
     echo '標題:'.$post ->title.'<br>';
