@@ -43,9 +43,13 @@ Route::get('/', function () {
     dd($post);
     //迴圈每轉一次,由$posts依序取出一篇貼文$post dd ($posts);
 */
+/*
 $post = Post::find(6);
 echo '標題: '.$post->title.'<br>';
 echo '內容: '.$post->content.'<br>';
 echo '--------------------------'.'<br>';
 dd($post);
+*/
+$posts = Post::where('id','<','10')->orderBy('id','DESC')->get();
+dd($posts);
 });
