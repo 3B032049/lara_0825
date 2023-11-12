@@ -23,16 +23,23 @@ Route::get('/', function () {
     $post->save();
     return 'Saved, OK!';
 */
-
+/*
     Post::create([
         'title'=>'created title',
         'content'=>'created content',
     ]);
-    
-    /*
-    $post = Post::find(1);
-    echo '標題:'.$post ->title.'<br>';
-    echo '內容:'.$post ->content.'<br>';
+*/
+
+    $posts =Post::all();
+    //使用迴圈將所有貼文($posts)一一顯示出來
+    foreach ($posts as $post) {
+        echo "編號:".$post->id. '<br>';
+        echo "標題:".$post->title. '<br>';
+        echo "內容:".$post->content. '<br>';
+        echo "張貼時間:".$post->created_at. '<br>';
+        echo "---------".'<br>';
+
+    }
     dd($post);
-    */
+    //迴圈每轉一次,由$posts依序取出一篇貼文$post dd ($posts);
 });
