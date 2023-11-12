@@ -65,9 +65,13 @@ dd($posts);
     ]);
     return 'Updated!';
 */
+    /*
     $post = Post::find(1);
     $post->title = 'saved title';
     $post->content = 'saved content';
     $post->save();
     return 'Saved!';
+    */
+    $post = Post::find(1);
+    $post->delete();
 });
