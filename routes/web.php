@@ -50,6 +50,18 @@ echo '內容: '.$post->content.'<br>';
 echo '--------------------------'.'<br>';
 dd($post);
 */
+/*
 $posts = Post::where('id','<','10')->orderBy('id','DESC')->get();
 dd($posts);
+*/
+
+
+
+
+    $post = Post::find(1);
+    $post->update([
+        'title'=>'updated title',
+        'content'=>'updated content',
+    ]);
+    return 'Updated!';
 });
