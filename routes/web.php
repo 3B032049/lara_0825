@@ -72,6 +72,9 @@ dd($posts);
     $post->save();
     return 'Saved!';
     */
+    /*
     $post = Post::find(1);
     $post->delete();
+    */
+    Post::destroy(2);
 });
